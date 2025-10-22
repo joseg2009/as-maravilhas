@@ -1,0 +1,146 @@
+body{
+    background-image: url(https://segredosdomundo.r7.com/wp-content/uploads/2017/09/7-maravilhas-do-mundo-antigo-e-7-maravilhas-do-mundo-moderno-e1625624529952.png);
+      background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body::before {
+   content: "";
+   position: absolute;
+   inset: 0; /* cobre toda a tela */
+   background-color: rgba(255, 255, 255, 0.5); /* preto com 50% de opacidade */
+   z-index: -1; /* fica atrás do conteúdo */
+ }
+
+
+.body1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+    
+}
+
+.body2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 170px;
+
+}
+
+
+.conteiner{
+    width: 220px;
+    height: 170px;
+    margin:auto;
+
+    /* adicionar profundidade */
+    perspective: 200px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+
+ .rotacao{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    /* Mantem a perspectiva 3d nos filhos */
+    transform-style: preserve-3d;
+
+    /* animação suave  */
+
+    transition:all 1s ease-in-out;
+
+    
+ }
+
+ .conteiner:hover .rotacao{
+    transform: rotatey(180deg) scale(1.39) translatey(1px);
+    
+ }
+ .frente, .verso, .verso1, .verso2, .verso3, .verso4, .verso5, .verso6 {
+    width: 100%;
+    height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;   
+
+     /* esconde a façe de tra a o virar  */
+     backface-visibility: hidden;
+
+     padding: 5px;
+     text-align: center;
+     border-radius: 8px;
+     color: white;
+
+   
+    
+    
+  
+ }
+
+ .frente{
+    background-color: #e6811b ;
+    z-index: 2;
+
+ }
+
+ .verso{
+    background-image: url(https://media.gazetadopovo.com.br/2011/10/427e09b1459e99a981dcd583fc82618e-gpMedium.jpg);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+
+ }
+
+ .verso1{
+    background-image: url(https://guiavi.com/wp-content/uploads/2021/12/excursion-gran-muralla-china-.jpg.webp);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+ }
+
+ .verso2{
+    background-image: url(https://oficinadeinverno.com.br/cdn/shop/articles/oficina-de-inverno-machu-picchu-llama.jpg?v=1660099365);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+ }
+
+ .verso3{
+    background-image: url(https://aventurasnahistoria.com.br/wp-content/uploads/2025/06/ah-padrao-6_si6dorwi.jpg);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+ }
+
+ .verso4{
+    background-image: url(https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/nationalgeographic_2744183_bx.webp?w=1600&h=900);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+ }
+
+ .verso5{
+    background-image: url(https://media.istockphoto.com/id/155096944/pt/foto/taj-mahal-nascer-do-sol.jpg?s=612x612&w=0&k=20&c=hHYxBEF4Mu7-kQCU2-FfdbL2U2ztvJmMcup-TBMfXYk=);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+ }
+ .verso6{
+    background-image: url(https://www.worldhistory.org/img/r/p/1500x1500/3048.jpg);
+    background-size: 100% 100%;
+    transform: rotatey(180deg);
+ } 
+
+ header{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+ }
+
+ footer{
+    text-align: center;
+    margin-top: 270px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
